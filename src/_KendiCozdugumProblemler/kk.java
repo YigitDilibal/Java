@@ -15,5 +15,6 @@ public class kk {
         System.out.println(list.isEmpty());
 
         list.remove(9);
+        System.out.println("test");
     }
 }
