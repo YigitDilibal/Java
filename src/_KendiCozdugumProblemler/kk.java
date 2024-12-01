@@ -16,5 +16,6 @@ public class kk {
 
         list.remove(9);
         System.out.println("test");
+        System.out.println("test3");
     }
 }
