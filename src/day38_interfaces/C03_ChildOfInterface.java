@@ -6,7 +6,7 @@ public class C03_ChildOfInterface implements I01_Interface {
 
         System.out.println(SAYI1); // 10
 
-        SAYI1=45;
+        //SAYI1=45;
 
     }
 
