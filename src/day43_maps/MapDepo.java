@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class MapDepo {
 
-    static Map<Integer,String> ogrenciMap = new HashMap<>();
+    static protected Map<Integer,String> ogrenciMap = new HashMap<>();
 
     static {
         ogrenciMap.put(101,"Ali-Can-11-H-MF");
@@ -160,6 +160,58 @@ public class MapDepo {
 
             }
 
+        }
+    }
+
+    public static void verilenBolumuYenisiyleDegistir(String eskiBolum,String yeniBolum){
+        Set<Integer> ogrenciKeySet = ogrenciMap.keySet();
+
+        for (Integer each:ogrenciKeySet){
+
+            String eachValue = ogrenciMap.get(each);
+
+            String[] valueArr = eachValue.split("-");
+
+            if (valueArr[4].equals(eskiBolum)) {
+
+                valueArr[4] = yeniBolum;
+
+                String yeniValue = String.join("-",valueArr);
+
+                ogrenciMap.put(each,yeniValue);
+            }
+        }
+    }
+
+    public static void siniflariBirYukseltme(){
+        Set<Integer> ogrenciKeySet = ogrenciMap.keySet();
+
+        for (Integer each:ogrenciKeySet){
+
+            String eachValue = ogrenciMap.get(each);
+
+            String[] valueArr = eachValue.split("-");
+
+            if (valueArr[2].equals("12")) {
+
+                valueArr[2] = "Mezun";
+
+                String yeniValue = String.join("-",valueArr);
+
+                ogrenciMap.put(each,yeniValue);
+            } else if (valueArr[2].equals("Mezun")) {
+
+            }else {
+
+                int yenisinif = Integer.parseInt(valueArr[2]);
+                yenisinif++;
+                valueArr[2] = yenisinif + "";
+
+                String yeniValue = String.join("-",valueArr);
+
+                ogrenciMap.put(each,yeniValue);
+
+            }
         }
     }
 
