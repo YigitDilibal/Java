@@ -1,4 +1,4 @@
-package day44_mapsUpdate_entrySet;
+package day44_mapsUpdate_NestedMap;
 
 public class C06_NestedMapListeYazdirma extends NestedMapDepo {
 
